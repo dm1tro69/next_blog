@@ -11,8 +11,9 @@ export default async function handler(req, res) {
     }
     const newMessage = {email, name, message}
     let client;
+    const connectionString = `mongodb+srv://${process.env.mongodb_username}:${process.env.mongodb_password}@${process.env.mongodb_clustername}.4xie8.mongodb.net/${process.env.mongodb_database}?retryWrites=true&w=majority`
     try {
-        client = await MongoClient.connect('mongodb+srv://dmytro-next:oXrADND7ANAV46h9@cluster0.4xie8.mongodb.net/my-site?retryWrites=true&w=majority')
+        client = await MongoClient.connect(connectionString)
     }catch (e) {
         res.status(500).json({ message: e.message })
 

@@ -11,7 +11,7 @@ const Hero = () => {
                     alt={'img'}
                     />
             </div>
-            <h1>Hi, I'm Dmytro</h1>
+            <h1>Hi, I&lsquo; m Dmytro</h1>
             <p>I blog about web development - especially frontend frameworks like Angular or React</p>
         </section>
     );
